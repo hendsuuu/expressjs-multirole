@@ -1,0 +1,99 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Hendsu",
+    "email": "Hendrasu@gmail.com",
+    "password": "123456",
+    "confPassword" : "123456",
+    "role": "user"
+}
+
+###
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/1ee55ed6-1952-4d58-b45c-01334393e76d
+
+###
+PATCH  http://localhost:5000/users/1ee55ed6-1952-4d58-b45c-01334393e76d
+Content-Type: application/json
+
+{
+    "name": "Hendsu",
+    "email": "Hendrasuu@gmail.com",
+    "password": "",
+    "confPassword" : "",
+    "role": "user"
+}
+
+###
+DELETE  http://localhost:5000/users/1ee55ed6-1952-4d58-b45c-01334393e76d
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+
+    "email": "Hendrasu@gmail.com",
+    "password": "123456"
+   
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+
+    "email": "admin@gmail.com",
+    "password": "123456"
+   
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE  http://localhost:5000/logout
+
+
+###
+//get all product
+
+GET http://localhost:5000/products
+
+###
+//get product by id
+
+GET http://localhost:5000/products/b184be7c-9e58-4d55-986a-4307a09c4310
+
+###
+//post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+
+    "name": " teman beban",
+    "price": 2000000
+   
+}
+
+###
+//update data product
+PATCH  http://localhost:5000/products/25282b0e-3c44-43a6-843a-cf782f97bcad
+Content-Type: application/json
+
+{
+
+    "name": "updated",
+    "price": 2000000
+   
+}
+
+###
+//get product by id
+
+DELETE  http://localhost:5000/products/b184be7c-9e58-4d55-986a-4307a09c4310
